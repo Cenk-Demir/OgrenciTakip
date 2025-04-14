@@ -1,0 +1,40 @@
+@{
+    ViewBag.Title = "Öğrenci Formu";
+}
+
+@if (ViewBag.Hata != null)
+{
+    <p style="color: red;">@ViewBag.Hata</p>
+}
+
+<form method="post" action="/Ogrenci/Gonder">
+    <label for="ad">Ad:</label>
+    <input type="text" id="ad" name="ad" placeholder="Ad" required /><br>
+
+    <label for="soyad">Soyad:</label>
+    <input type="text" id="soyad" name="soyad" placeholder="Soyad" required /><br>
+
+    <label for="sinif">Sınıf:</label>
+    <select id="sinif" name="sinif" required>
+        <option value="">Sınıf Seçiniz</option>
+        <option value="1A">1A</option>
+        <option value="2B">2B</option>
+        <option value="3C">3C</option>
+    </select><br>
+
+    <label>Cinsiyet:</label><br>
+    <input type="radio" id="erkek" name="cinsiyet" value="Erkek" required />
+    <label for="erkek">Erkek</label>
+    <input type="radio" id="kadin" name="cinsiyet" value="Kadın" required />
+    <label for="kadin">Kadın</label><br>
+
+    <label>Diller:</label><br>
+    <input type="checkbox" id="ingilizce" name="diller" value="İngilizce" />
+    <label for="ingilizce">İngilizce</label>
+    <input type="checkbox" id="almanca" name="diller" value="Almanca" />
+    <label for="almanca">Almanca</label>
+    <input type="checkbox" id="fransizca" name="diller" value="Fransızca" />
+    <label for="fransizca">Fransızca</label><br>
+
+    <button type="submit">Gönder</button>
+</form>

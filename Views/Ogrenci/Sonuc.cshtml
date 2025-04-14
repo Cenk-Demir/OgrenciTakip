@@ -1,0 +1,5 @@
+<p>Ad: @(ViewBag.Ad ?? "Ad bilgisi yok")</p>
+<p>Soyad: @(ViewBag.Soyad ?? "Soyad bilgisi yok")</p>
+<p>Sınıf: @(ViewData["Sinif"] ?? "Sınıf bilgisi yok")</p>
+<p>Cinsiyet: @(ViewData["Cinsiyet"] ?? "Cinsiyet bilgisi yok")</p>
+<p>Diller: @(ViewData["Diller"] != null ? string.Join(", ", (string[])ViewData["Diller"]) : "Dil bilgisi yok")</p>
